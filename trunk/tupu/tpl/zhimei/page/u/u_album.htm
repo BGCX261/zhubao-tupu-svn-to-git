@@ -1,0 +1,108 @@
+<?php
+	$css_list[0]['url'][] = './tpl/css/zone.css';
+	$js_list[0] = './tpl/js/zone.js';
+    $js_list[1] = './tpl/js/im_006.js';
+?>
+<!--{template inc/header}-->
+<div id="body" class="fm990">
+		<div id="content">
+        	<div class="sharelist" id="zhimeisheetbar">
+                	<div class="sheet cf">
+                    	<div class="floatright">
+							<span><a href="{u u/album uid=$home_uid}" class="blue">{$home_user['albums']}个杂志</a></span>
+							<span class="dot"></span>
+							<span><a href="{u u/talk uid=$home_uid}" class="blue">{$home_user['shares']}个分享</a></span>
+							<span class="dot"></span>
+							<span class="like"><a href="{u u/fav uid=$home_uid}" class="blue">{$home_user['favs']}个喜欢</a></span>
+                        </div>
+                        <span class="sheetname marginleft" id="fix-string05">{$home_user['user_name']}</span>
+                    </div>
+                </div>
+            <div style="clear: both;"></div>
+            <div id="contentMain">
+				<!--{template inc/u/u_menu}-->
+                <!--预加载杂志社数据-->
+            
+            <!--{if $_FANWE['request']['action'] == 'album'}-->
+            <!--{loop $album_list $list}-->
+           
+            <div class="mbox">
+            	<div class="followlist">
+                	<h3 class="mboxTitle">
+                    	<span class="number floatright">共{$list['img_count']}张</span>
+                        <span class="t" title="{$list['title']}">{$list['title']}</span>
+                    </h3>
+                    <div class="list">
+                       <ul>
+                            <!--{eval $j = 1;}-->
+                            <!--{eval $list_img_counts = array(0,0,0,0,0,0,0,0,0);}-->
+                            <!--{loop $list_img_counts $imgkey $imgindex}-->
+                            <!--{eval $img = $list['album_imgs'][$imgkey];}-->
+							<!--{eval $img_animate = $list['album_imgs_animate'][$imgkey];}-->
+                            <!--{if !empty($img)}-->
+                                <li style="*width:60px; *margin-bottom:5px;"><a target="_blank" href="{$list['url']}">
+                                	{if $img_animate}
+									<img src="{$img}" width="60" height="60" />
+									{else}
+									<img src="{getimg $img 60 60 1}" width="60" height="60" />
+									{/if}
+									</a></li>
+                            <!--{else}-->
+							
+                            <li style="*margin-bottom:5px; *width:60px;"><a target="_blank" class="add_img" href="{$list['url']}"><img src="./tpl/images/no-img.gif" width="60" height="60"/></a></li>
+                            
+							<!--{/if}-->
+                            <!--{if $j % 3 != 0}-->
+                            <li><span></span></li>
+                            <!--{/if}-->
+                            <!--{eval $j++;}-->
+                            <!--{/loop}-->
+                        </ul>                     	
+                    </div>
+                    {if $list.isMe == 1}
+                    	<div class="follow">
+                        	<a href="javascript:;" status="follow" class="longbutton concern jquery-option" onclick="$.Edit_Album({$list['id']})" >编辑</a>
+                        </div>
+                    {else}
+                   		<div class="follow">
+                        	<a href="{$list['url']}" status="follow" class="longbutton concern jquery-option">查看</a>
+                        </div>
+                    {/if}
+                 </div>
+            </div>
+            <!--{/loop}-->
+            <!--{/if}-->
+            
+            <!--预加载用户数据-->
+            </div>
+			<div id="imloading" class="imfootloading" style="display:none;"><div class="loading">正在加载，请稍后......</div></div>
+			<div id="firstload" class="firstload" style="display:none;">加载中…</div>
+		</div>
+	</div>
+</div>
+<script>
+jQuery(function($){
+
+$("#contentMain .mbox").hover(function() {
+                    $(this).addClass("hover");
+                },
+                function() {
+                    $(this).removeClass("hover");
+                });
+				
+var linkUrl = '{$link_url}',jsonUrl = '{$json_url}';
+linkUrl = linkUrl +"&v=" +Math.random()*99999999;
+autoLayout_album.init({
+contentID:"contentMain",
+rightLoad:true,
+leftID:"",
+rightID:["rightLabel1"],
+linkUrl:linkUrl,
+pageAuto: true,
+loadingID:"imloading"
+});
+autoLayout_album.eachAction(jsonUrl);
+});
+
+</script>
+<!--{template inc/footer}-->

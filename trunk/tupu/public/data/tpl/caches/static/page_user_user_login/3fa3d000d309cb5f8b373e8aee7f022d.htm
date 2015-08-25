@@ -1,0 +1,266 @@
+<?php
+$_FANWE['CACHE_CSS_SCRIPT_PHP'] = array (
+  'script' => 
+  array (
+    0 => 
+    array (
+      0 => './public/js/jquery.js',
+      1 => './public/js/base.js',
+      2 => './public/js/jquery.easing.js',
+      3 => './public/js/jquery.lazyload.js',
+      4 => './public/js/swfobject.js',
+    ),
+    1 => 
+    array (
+      0 => './public/js/lang.js',
+      1 => './public/js/setting.js',
+      2 => './public/js/jquery.bgiframe.js',
+      3 => './public/js/jquery.weebox.js',
+      4 => './public/js/ajaxfileupload.js',
+      5 => './public/js/jquery.dragsort.js',
+    ),
+    2 => './tpl/js/loginreg.js',
+  ),
+  'css' => 
+  array (
+    0 => 
+    array (
+      0 => './tpl/css/reset.css',
+      1 => './tpl/css/base.css',
+      2 => './tpl/css/globe.css',
+      3 => './tpl/css/publishbox.css',
+      4 => './tpl/css/lightbox.css',
+      5 => './tpl/css/addfav.css',
+    ),
+    1 => './tpl/css/loginreg.css',
+  ),
+);
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>珠宝网 - 奢侈,创意,精美 - 采集珠宝靓图</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="珠宝，分享图片，采集图片，发现图片，消费兴趣收集平台" />
+<meta name="description" content="珠宝网，帮你采集，整理，分享，发现网络上你喜欢的珠宝图片。你可以用它收集灵感，保存精美稀有的珠宝饰品。" />
+<link rel="icon" href="/zhubao/favicon.ico" type="image/x-icon" />
+<script src="./public/data/tpl/js/fcd11a0df59e2ccb2db8e46b1c6fbb2e.js" type="text/javascript"></script>
+   <script src='ZeroClipboard.js'></script>
+   <script language="JavaScript">
+var clip = null;
+function init_copy() {
+clip = new ZeroClipboard.Client();
+clip.setHandCursor( true );
+clip.glue('ClipBoard');
+clip.addEventListener('mouseOver', function (client) {
+// update the text on mouse over
+clip.setText( document.getElementById('invite_link').value );
+});
+clip.addEventListener('onMouseUp', function (client) {
+alert('复制成功');
+
+});
+}
+
+</script>
+
+
+ 
+<link rel="stylesheet" type="text/css" href="./public/data/tpl/css/00ec5da994f0d6cd40b1685a0c1cbe62.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="./tpl/css/loginreg.css" />
+<script type="text/javascript">
+var SITE_PATH = '/zhubao/';
+var SITE_URL = 'http://127.0.0.1/zhubao/';
+var TPL_PATH = '/zhubao/tpl/huaban/';
+var PUBLIC_PATH	 = '/zhubao/public/';
+var MODULE_NAME	 = 'User';
+var ACTION_NAME	 = 'login';
+var COOKIE_PRE = "v99W_2132_";
+var TPL_NAME = 'huaban';
+</script>
+</head>
+<body>
+
+<div id="pagewrap">
+<!--新头部开始-->
+        <div id="header" class="cf">
+            <!--newhead-->
+            <div id="header-1" class="header-1">
+                <div class="topsysmenu cf" id="topsysmenu" >
+                    <a href="http://www.zhubao.com" class="mainlogo" ><img src="/zhubao/./logo.gif" /></a>
+                    <div class="menu_bar">
+                        <!--dynamic getUserInfo-->                        <div class="topsearch">
+                            <div class="searchrelt cf">
+                                <form action="/zhubao/book.php?action=search" method="post" onsubmit="return false;">
+                                    <input type="text" class="inputtext" id="jquery-search" autocomplete="off" placeholder="搜索你喜欢的">
+                                    <input type="submit" value=" " class="searchbt" id="fm_hd_btm_shbx_bttn" />
+                                    <input type="hidden" name="action" value="search" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+                        <div id="header-3">
+            	<div class="toplogin" id="toplogin" >
+                	<div id="intro" >
+                    	<h2>珠宝网，采集你喜欢的。</h2>
+                        <div class="unauth-btns">
+                        	<a href="/zhubao/user.php?action=register" class="btn btn18 rbtn">
+                            	<strong> 限时开放注册 »</strong>
+                                <span></span>
+                            </a>
+                            <a id="login_btn" href="/zhubao/user.php?action=login" class="btn btn18 wbtn">
+                            	<strong><em></em> 登录</strong>
+                                <span></span>
+                            </a>
+                        </div>
+                        <!--<a id="mv_trigger" href="http://www.zuilv.com" onclick="app.showDialog('mv');return false;" title="观看视频，了解珠宝网" class="mv"></a>-->
+                    </div>	
+                </div>
+            </div>
+                           </div>
+    <script>
+jQuery(function($){
+$("#jquery-search").focus(function(){
+  				$(this).css('background-color','white');
+});
+$("#jquery-search").blur(function(){
+  				$(this).css('background-color','#FAF7F7');
+});
+});
+</script>
+<div class="clear"></div>
+<!--新头部结束-->
+<div id="body_wrap"><div id="body" class="fm960">
+<div class="piece1">
+<div class="piece1_hd"></div>
+<div class="piece1_bd clearfix">
+<div id="content" style="width:960px;">
+<div class="lg_left">
+<h1>登陆珠宝网</h1>
+<div class="lg_form">
+<form id="loginForm" name="loginForm" action="/zhubao/user.php?action=ajax_login" method="post">
+<div class="lg_name">
+<span>用户名：</span>
+<input type="text" value="" tooltip="邮箱 或 昵称" name="email_name" class="text" maxlength="32" />
+</div>
+<div class="err_name"><span></span></div>
+<div class="clear"></div>
+<div class="lg_pass">
+<span>密　码：</span>
+<input type="password" value="" name="pass" class="text" maxlength="32" />
+</div>
+<div class="err_pass"><span></span></div>
+<div class="clear"></div>
+<div class="iserror" id="iserror">
+<div class="war"><img src="./tpl/images/error_02.png"><span>登录名或密码错误</span></div>
+<div class="content">
+<pre>1、如果登录名是邮箱地址，请输入全称<br/> 如：share@qq.com<br/>2、请检查登录名大小写是否正确。<br/>3、请检查密码大小写是否正确。</pre>
+</div>
+</div>
+<div class="iserror iserror2" id="iserror2">
+<div class="war"><img src="./tpl/images/error_02.png"><span>用户被锁定，无法登录！</span></div>
+<div class="content">
+<pre>1.可以联系管理员进行解锁。<br/>2.重新注册一个账户！</pre>
+</div>
+</div>
+<div class="lg_remember">
+<label>
+<input type="checkbox" name="remember" class="checkbox" checked="checked" value="1209600">
+<span>记住我（两周免登陆）</span>
+</label>
+</div>
+<div class="lg_login">
+<input type="submit" value=" " class="sub" id="login_submit" />
+<a href="/zhubao/user.php?action=forgetpassword">忘记密码？</a>
+</div>
+<div class="clear"></div>
+<div class="lg_login_loading">
+<span>登陆中，请稍候...</span>
+</div>
+<input name="rhash" value="<!--dynamic getRHash-->" type="hidden"/>
+<input name="refer" value="<!--dynamic getUserRefer-->" type="hidden"/>
+<input name="action" value="ajax_login" type="hidden"/>
+</form>
+<div class="ot_login">
+<span>您也可以用以下方式登录：</span>
+<div class="ot_btn"></div>
+</div>
+</div>
+</div>
+<div class="lg_right">
+<h1>注册</h1>
+<span>还没有珠宝网帐号？</span>
+<a href="/zhubao/user.php?action=register"></a>
+</div>
+</div>
+</div>
+<div class="piece1_ft"></div>
+</div>
+</div>	</div>
+    
+    <div id="footer" >
+<p id="footer-p"><p>
+	珠宝兴趣分享系统 系统版本：v2.0版权所有&copy; 珠宝网</p>
+</p>
+    </div>
+
+    <a id="elevator" href="#" onclick="return false;" class="Indicator btn wbtn off"><strong> 回到顶部</strong><span></span></a>
+</div> 
+</body>
+<script src="./public/data/tpl/js/b0648867796394a9dc04abb27ee8fea8.js" type="text/javascript" defer="true"></script><script src="./tpl/js/loginreg.js" type="text/javascript"></script>
+<!--dynamic getScript--><script type="text/javascript">
+jQuery(function($){
+$(".lazyload").lazyload({"placeholder":"./tpl/images/lazyload.gif"});
+$("#fm_hd_btm_shbx_bttn").click(function(){
+var keyword = $("#jquery-search").val();
+if(keyword == '搜索你感兴趣的' || keyword == '')
+{
+return false;
+}
+$.Head_Search(keyword,'share');
+return false;
+});
+
+$('#sysmenus li').hover(function(){
+$(this).find('.topdmenu').slideDown(200);
+$(this).find('.topothermenu').addClass('topmenuover');
+$(this).find('.topusername').addClass('topmenuover');
+$('#topdmenu1').width($(this).innerWidth()-2);
+},function(){
+$(this).find('.topdmenu').hide();
+$(this).find('.topothermenu').removeClass('topmenuover');
+$(this).find('.topusername').removeClass('topmenuover');
+});
+if($("#unlogin-alterbartop").length==1) {
+setTimeout("$('#unlogin-alterbartop').slideDown()",1000);
+}
+if($("#firstload").length == 1)
+{
+if($("#firstload").css("display") == "block")
+{
+setTimeout("$('#firstload').hide();$('#body').show();$('#firstfastbox').hide();",300);
+
+}
+}
+
+$(window).scroll(function(){
+if ($(document.documentElement).scrollTop() > 0 || $(document.body).scrollTop() > 0) {
+            $("#elevator").removeClass('off');
+            $("#elevator").die().live("click",
+            function() {
+                $("body,html").animate({
+                    scrollTop: 0
+                },
+                500)
+            })
+        } else {
+            $("#elevator").addClass('off');
+        }
+});
+});
+ 
+</script>
+</html>

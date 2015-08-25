@@ -1,0 +1,9 @@
+body{ background-color:#F0EEEE;}
+.cf, .clearfix {zoom: 1;}
+.cf::after, .clearfix::after {content: '';display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}
+
+.labels a {color: #888;display: block;float: left;line-height: 24px;padding-left: 10px;margin-bottom: 10px;margin-right: 10px;background: url(../images/table.gif) no-repeat scroll left -141px transparent;cursor: pointer;}
+
+.labels a.current {background: url("../images/table.gif") no-repeat scroll left -91px transparent;color: white!important;}
+.labels a em {display: block;float: left;padding-right: 10px;font-size: 14px;background: url("../images/table.gif") no-repeat scroll right -166px transparent;cursor: pointer;color: #1D8B74!important; font-style:normal;}
+.labels a.current em {background: url("../images/table.gif") no-repeat scroll right -116px transparent;cursor: pointer;color: white!important;}
